@@ -9,8 +9,10 @@ const cairo = Cairo({
   display: "swap",
 });
 
+const siteUrl = site.siteUrl || "https://cocktail-bondan.vercel.app";
+
 export const metadata: Metadata = {
-  ...(site.siteUrl ? { metadataBase: new URL(site.siteUrl) } : {}),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "كوكتيل بوندان | Cocktail Bondan",
     template: "%s | كوكتيل بوندان",
@@ -19,7 +21,31 @@ export const metadata: Metadata = {
   applicationName: "Cocktail Bondan",
   icons: {
     icon: "/logo.png",
+    shortcut: "/logo.png",
     apple: "/logo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Cocktail Bondan",
+    title: "كوكتيل بوندان | Cocktail Bondan",
+    description: "خليك منعش مع بوندان — عصائر، كوكتيل، ميلك شيك، وحلويات",
+    locale: "ar_AR",
+    images: [
+      {
+        url: "/og.png",
+        width: 1080,
+        height: 1080,
+        alt: "كوكتيل بوندان",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "كوكتيل بوندان | Cocktail Bondan",
+    description: "خليك منعش مع بوندان — عصائر، كوكتيل، ميلك شيك، وحلويات",
+    images: ["/og.png"],
   },
 };
 
