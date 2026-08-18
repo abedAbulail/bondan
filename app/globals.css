@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --green: #4d9a40;
+  --green-dark: #2f6b28;
+  --yellow: #fecf02;
+  --cream: #fffdf5;
+  --background: #fffdf5;
+  --foreground: #1a4a16;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-green: #4d9a40;
+  --color-brand-yellow: #fecf02;
+  --font-sans: var(--font-cairo);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--foreground);
+  min-height: 100%;
+}
+
+::selection {
+  background: #fecf02;
+  color: #1a4a16;
+}
