@@ -488,8 +488,10 @@ function ProductScreen({
 
         {sizes.length > 1 ? (
           <section className="mt-6 rounded-[16px] bg-white px-4 py-4" style={{ boxShadow: colors.shadow }}>
-            <p className="mb-3 text-center text-[14px] font-black">الحجم</p>
-            <div className={`grid gap-2 ${sizes.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
+            <p className="mb-3 text-center text-[14px] font-black">
+              {item.options?.length ? "الخيار" : "الحجم"}
+            </p>
+            <div className={item.options?.length ? "space-y-2" : `grid gap-2 ${sizes.length === 2 ? "grid-cols-2" : "grid-cols-3"}`}>
               {sizes.map((size, index) => {
                 const active = index === sizeIndex;
                 return (
@@ -497,14 +499,14 @@ function ProductScreen({
                     key={size.label}
                     type="button"
                     onClick={() => setSizeIndex(index)}
-                    className="rounded-[12px] px-2 py-3 text-center"
+                    className={`rounded-[12px] px-3 py-3 ${item.options?.length ? "flex w-full items-center justify-between text-right" : "text-center"}`}
                     style={{
                       backgroundColor: active ? "#EEF4EF" : colors.field,
                       border: `1.5px solid ${active ? colors.green : "transparent"}`,
                     }}
                   >
-                    <span className="block text-[13px] font-black">{size.label}</span>
-                    <span className="mt-1 block text-[12px] font-bold" style={{ color: active ? colors.green : colors.muted }}>
+                    <span className="block text-[13px] font-black leading-snug">{size.label}</span>
+                    <span className={`block text-[12px] font-bold ${item.options?.length ? "" : "mt-1"}`} style={{ color: active ? colors.green : colors.muted }}>
                       {size.price} ₪
                     </span>
                   </button>

@@ -8,6 +8,7 @@ export type MenuItem = {
   name: string;
   prices: number[];
   description?: string;
+  options?: MenuSize[];
 };
 
 export type MenuCategory = {
@@ -40,6 +41,7 @@ function sizesFor(prices: number[]): MenuSize[] {
 }
 
 export function itemSizes(item: MenuItem): MenuSize[] {
+  if (item.options?.length) return item.options;
   return sizesFor(item.prices);
 }
 
@@ -82,8 +84,24 @@ export const menu: MenuCategory[] = [
       text: "#2a3214",
     },
     items: [
-      { id: "sw-fash-s", name: "فشافيش صغير", prices: [10, 15] },
-      { id: "sw-fash-l", name: "فشافيش كبير", prices: [20, 25] },
+      {
+        id: "sw-fash-s",
+        name: "فشافيش صغير",
+        prices: [10, 15],
+        options: [
+          { label: "نوتيلا ١٠ حبات", price: 10 },
+          { label: "مكس ١٠ حبات", price: 15 },
+        ],
+      },
+      {
+        id: "sw-fash-l",
+        name: "فشافيش كبير",
+        prices: [20, 25],
+        options: [
+          { label: "نوتيلا ٢٥ حبة", price: 20 },
+          { label: "مكس ٢٥ حبة", price: 25 },
+        ],
+      },
       { id: "sw-crepe-nutella", name: "كريب نوتيلا", prices: [15] },
       { id: "sw-crepe-lotus", name: "كريب لوتس", prices: [15] },
       { id: "sw-crepe-dubai", name: "كريب دبي", prices: [20] },
