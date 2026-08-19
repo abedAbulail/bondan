@@ -302,7 +302,7 @@ ${lines}${notes}
           className="mt-5 flex h-[52px] items-center gap-3 rounded-[14px] bg-white px-4"
           style={{ boxShadow: colors.shadow, border: `1px solid ${colors.border}` }}
         >
-          <SearchIcon className="h-5 w-5 shrink-0" style={{ color: colors.muted }} />
+          <SearchIcon className="h-5 w-5 shrink-0 text-[#8A8A8A]" />
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
