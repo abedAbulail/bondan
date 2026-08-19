@@ -9,19 +9,21 @@ type QrKind = "menu" | "linktree";
 
 const qrConfig: Record<
   QrKind,
-  { title: string; path: string; filename: string; buttonClass: string }
+  { title: string; hint: string; path: string; filename: string; buttonClass: string }
 > = {
   menu: {
     title: "QR القائمة",
+    hint: "تصفح قائمتنا الآن",
     path: "/menu",
     filename: "bondan-menu-qr.png",
-    buttonClass: "bg-[#fecf02] text-[#2f6b28]",
+    buttonClass: "bg-[#f0c12a] text-[#1a3321]",
   },
   linktree: {
-    title: "QR اللينك تري",
+    title: "QR للطلبات",
+    hint: "امسح للطلب مباشرة",
     path: "/",
     filename: "bondan-linktree-qr.png",
-    buttonClass: "bg-[#4d9a40] text-white",
+    buttonClass: "bg-[#1a6b32] text-white",
   },
 };
 
@@ -86,10 +88,14 @@ export function QrButtons() {
               key={kind}
               type="button"
               onClick={() => setOpen(kind)}
-              className={`flex items-center justify-center gap-2 rounded-[1.2rem] px-3 py-3.5 text-sm font-black shadow-[0_8px_22px_rgba(45,106,40,0.16)] transition hover:-translate-y-0.5 sm:text-base ${item.buttonClass}`}
+              className={`flex items-center gap-2 rounded-[1.1rem] px-3 py-3 text-right shadow-[0_8px_22px_rgba(45,106,40,0.14)] transition hover:-translate-y-0.5 ${item.buttonClass}`}
+              dir="ltr"
             >
-              <QrIcon className="h-5 w-5 shrink-0" />
-              {item.title}
+              <QrIcon className="h-6 w-6 shrink-0" />
+              <span className="min-w-0 flex-1 text-right" dir="rtl">
+                <span className="block text-[13px] font-black leading-none sm:text-sm">{item.title}</span>
+                <span className="mt-1 block text-[10px] font-bold opacity-80 sm:text-[11px]">{item.hint}</span>
+              </span>
             </button>
           );
         })}

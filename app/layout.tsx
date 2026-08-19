@@ -1,11 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Cairo } from "next/font/google";
+import { Cairo, Reem_Kufi } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
   variable: "--font-cairo",
+  display: "swap",
+});
+
+const reemKufi = Reem_Kufi({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-reem",
   display: "swap",
 });
 
@@ -55,7 +62,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} h-full antialiased`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${reemKufi.variable} h-full antialiased`}>
       <body className={`${cairo.className} min-h-full flex flex-col`}>{children}</body>
     </html>
   );

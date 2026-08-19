@@ -32,16 +32,6 @@ export const site = {
   phoneTel: env("NEXT_PUBLIC_PHONE_TEL", "+970592341356"),
 };
 
-export const menuCategories = [
-  { id: "juices", title: "العصائر الطبيعية", image: "/menu/juices.png" },
-  { id: "cocktail", title: "كوكتيل", image: "/menu/cocktail.png" },
-  { id: "blends", title: "الخلطات", image: "/menu/blends.png" },
-  { id: "milkshake", title: "الميلك شيك", image: "/menu/milkshake.png" },
-  { id: "mojito", title: "الموهيتو", image: "/menu/mojito.png" },
-  { id: "sweets", title: "الحلويات", image: "/menu/sweets.png" },
-  { id: "qashtouta", title: "القشطوطة", image: "/menu/qashtouta.png" },
-] as const;
-
 export function publicOrigin() {
   if (site.siteUrl) return site.siteUrl;
   if (typeof window !== "undefined") return window.location.origin;

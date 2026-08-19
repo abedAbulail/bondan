@@ -37,10 +37,10 @@ export function ShareButton() {
     <button
       type="button"
       onClick={share}
-      className="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-[#4d9a40] bg-white px-4 py-2 text-sm font-extrabold text-[#2f6b28] shadow-sm transition hover:bg-[#fecf02]"
+      className="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-[#1f6b32] bg-white px-5 py-2.5 text-sm font-extrabold text-[#1f6b32] shadow-sm transition hover:bg-[#fecf02]"
     >
       <ShareIcon className="h-4 w-4" />
-      {copied ? "تم النسخ" : "مشاركة"}
+      {copied ? "تم النسخ" : "مشاركة الرابط"}
     </button>
   );
 }

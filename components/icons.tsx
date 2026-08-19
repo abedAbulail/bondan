@@ -87,3 +87,157 @@ export function DownloadIcon({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function CartIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M4 5h2l1.5 10.5a1.5 1.5 0 0 0 1.5 1.3h8.2a1.5 1.5 0 0 0 1.47-1.18L20 8H7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="10" cy="19" r="1.4" fill="currentColor" />
+      <circle cx="17" cy="19" r="1.4" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function PlusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function MinusIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M5 12h14" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M6 6l12 12M18 6 6 18"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function ChevronLeftIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M15 6 9 12l6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function ChevronRightIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="m9 6 6 6-6 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function SearchIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" />
+      <path d="m16 16 4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function TrashIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M5 7h14M10 7V5h4v2M8 7l.8 12h6.4L16 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="m5 12 5 5 9-10" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function BookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M5 5.5c1.8-1 4.2-1 7 0s5.2 1 7 0V19c-1.8 1-4.2 1-7 0s-5.2-1-7 0V5.5Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+      <path d="M12 5.5V19" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
+
+export function LeafIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M5 15c6-9 14-9 14-9s0 8-9 14c0 0-1-2-1-4 0-2 1.2-3.5 3-4.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function MedalIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <circle cx="12" cy="14" r="5" stroke="currentColor" strokeWidth="1.8" />
+      <path d="M9 5.5 12 9l3-3.5M8 4.5 10 9M16 4.5 14 9" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+export function JuiceIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path d="M8 4h8l-1.2 14.5a2 2 0 0 1-2 1.8h-1.6a2 2 0 0 1-2-1.8L8 4Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M8.5 9h7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function ScooterIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" aria-hidden>
+      <circle cx="6.5" cy="18" r="2.2" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="18.5" cy="18" r="2.2" stroke="currentColor" strokeWidth="1.8" />
+      <path
+        d="M8.6 18h5.2L16 10h3.5M14 10 12 6H8"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
